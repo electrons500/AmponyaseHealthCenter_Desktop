@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D587D8C6-AA3E-47C0-89B9-FD96CB9A79C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AmponyaseHealthCenter_Desktop</RootNamespace>
+    <AssemblyName>AmponyaseHealthCenter_Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AHCDataset.cs">
+      <DependentUpon>AHCDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AHCDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AHCDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AllPatientsAttendanceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllPatientsAttendanceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BackupScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupScreen.Designer.cs">
+      <DependentUpon>BackupScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataCipher.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="DiseaseDiagnosedCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiseaseDiagnosedCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="FrmDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDiagnosis.Designer.cs">
+      <DependentUpon>FrmDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiseaseReporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiseaseReporting.Designer.cs">
+      <DependentUpon>frmDiseaseReporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGetFolderNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGetFolderNumber.Designer.cs">
+      <DependentUpon>FrmGetFolderNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmManageNHIS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmManageNHIS.Designer.cs">
+      <DependentUpon>FrmManageNHIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmManagePatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmManagePatients.Designer.cs">
+      <DependentUpon>FrmManagePatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNHIS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNHIS.Designer.cs">
+      <DependentUpon>FrmNHIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPatientAttendanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPatientAttendanceReport.Designer.cs">
+      <DependentUpon>FrmPatientAttendanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatientAttendanceReporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatientAttendanceReporting.Designer.cs">
+      <DependentUpon>frmPatientAttendanceReporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPatients.Designer.cs">
+      <DependentUpon>FrmPatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSearchNHIS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSearchNHIS.Designer.cs">
+      <DependentUpon>FrmSearchNHIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSearchPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSearchPatients.Designer.cs">
+      <DependentUpon>FrmSearchPatients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsersRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsersRegistration.Designer.cs">
+      <DependentUpon>FrmUsersRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainCenter.cs" />
+    <Compile Include="MDI_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Dashboard.Designer.cs">
+      <DependentUpon>MDI_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsAttendanceCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatientsAttendanceCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportDiseaseDiagnose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportDiseaseDiagnose.Designer.cs">
+      <DependentUpon>ReportDiseaseDiagnose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestoreScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestoreScreen.Designer.cs">
+      <DependentUpon>RestoreScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffNumberRetrival.cs" />
+    <EmbeddedResource Include="BackupScreen.resx">
+      <DependentUpon>BackupScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiseaseDiagnosedCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DiseaseDiagnosedCrystalReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDiagnosis.resx">
+      <DependentUpon>FrmDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiseaseReporting.resx">
+      <DependentUpon>frmDiseaseReporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGetFolderNumber.resx">
+      <DependentUpon>FrmGetFolderNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmManageNHIS.resx">
+      <DependentUpon>FrmManageNHIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmManagePatients.resx">
+      <DependentUpon>FrmManagePatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNHIS.resx">
+      <DependentUpon>FrmNHIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPatientAttendanceReport.resx">
+      <DependentUpon>FrmPatientAttendanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatientAttendanceReporting.resx">
+      <DependentUpon>frmPatientAttendanceReporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPatients.resx">
+      <DependentUpon>FrmPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSearchNHIS.resx">
+      <DependentUpon>FrmSearchNHIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSearchPatients.resx">
+      <DependentUpon>FrmSearchPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsersRegistration.resx">
+      <DependentUpon>FrmUsersRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Dashboard.resx">
+      <DependentUpon>MDI_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsAttendanceCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PatientsAttendanceCrystalReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportDiseaseDiagnose.resx">
+      <DependentUpon>ReportDiseaseDiagnose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestoreScreen.resx">
+      <DependentUpon>RestoreScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AHCDataset.xsc">
+      <DependentUpon>AHCDataset.xsd</DependentUpon>
+    </None>
+    <None Include="AHCDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AHCDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AHCDataset.xss">
+      <DependentUpon>AHCDataset.xsd</DependentUpon>
+    </None>
+    <None Include="AllPatientsAttendanceDataSet.xsc">
+      <DependentUpon>AllPatientsAttendanceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AllPatientsAttendanceDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllPatientsAttendanceDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AllPatientsAttendanceDataSet.xss">
+      <DependentUpon>AllPatientsAttendanceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-debitcard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expenses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prescri.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caDataBaseDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rpt4.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

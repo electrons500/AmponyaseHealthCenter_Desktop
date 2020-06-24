@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AHCDataset" targetNamespace="http://tempuri.org/AHCDataset.xsd" xmlns:mstns="http://tempuri.org/AHCDataset.xsd" xmlns="http://tempuri.org/AHCDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AHCDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AHCDataset" msprop:Generator_UserDSName="AHCDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DiseaseDiagnosed" msprop:Generator_TableClassName="DiseaseDiagnosedDataTable" msprop:Generator_TableVarName="tableDiseaseDiagnosed" msprop:Generator_RowChangedName="DiseaseDiagnosedRowChanged" msprop:Generator_TablePropName="DiseaseDiagnosed" msprop:Generator_RowDeletingName="DiseaseDiagnosedRowDeleting" msprop:Generator_RowChangingName="DiseaseDiagnosedRowChanging" msprop:Generator_RowEvHandlerName="DiseaseDiagnosedRowChangeEventHandler" msprop:Generator_RowDeletedName="DiseaseDiagnosedRowDeleted" msprop:Generator_RowClassName="DiseaseDiagnosedRow" msprop:Generator_UserTableName="DiseaseDiagnosed" msprop:Generator_RowEvArgName="DiseaseDiagnosedRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PatientId" msprop:Generator_ColumnVarNameInTable="columnPatientId" msprop:Generator_ColumnPropNameInRow="PatientId" msprop:Generator_ColumnPropNameInTable="PatientIdColumn" msprop:Generator_UserColumnName="PatientId" type="xs:string" minOccurs="0" />
+              <xs:element name="FullName" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" type="xs:string" minOccurs="0" />
+              <xs:element name="InsuranceNumber" msprop:Generator_ColumnVarNameInTable="columnInsuranceNumber" msprop:Generator_ColumnPropNameInRow="InsuranceNumber" msprop:Generator_ColumnPropNameInTable="InsuranceNumberColumn" msprop:Generator_UserColumnName="InsuranceNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="DiseaseTreated" msprop:Generator_ColumnVarNameInTable="columnDiseaseTreated" msprop:Generator_ColumnPropNameInRow="DiseaseTreated" msprop:Generator_ColumnPropNameInTable="DiseaseTreatedColumn" msprop:Generator_UserColumnName="DiseaseTreated" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

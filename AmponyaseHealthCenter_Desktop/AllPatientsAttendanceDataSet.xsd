@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AllPatientsAttendanceDataSet" targetNamespace="http://tempuri.org/AllPatientsAttendanceDataSet.xsd" xmlns:mstns="http://tempuri.org/AllPatientsAttendanceDataSet.xsd" xmlns="http://tempuri.org/AllPatientsAttendanceDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AllPatientsAttendanceDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AllPatientsAttendanceDataSet" msprop:Generator_UserDSName="AllPatientsAttendanceDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AllPatientsAttendance" msprop:Generator_TableClassName="AllPatientsAttendanceDataTable" msprop:Generator_TableVarName="tableAllPatientsAttendance" msprop:Generator_TablePropName="AllPatientsAttendance" msprop:Generator_RowDeletingName="AllPatientsAttendanceRowDeleting" msprop:Generator_RowChangingName="AllPatientsAttendanceRowChanging" msprop:Generator_RowEvHandlerName="AllPatientsAttendanceRowChangeEventHandler" msprop:Generator_RowDeletedName="AllPatientsAttendanceRowDeleted" msprop:Generator_UserTableName="AllPatientsAttendance" msprop:Generator_RowChangedName="AllPatientsAttendanceRowChanged" msprop:Generator_RowEvArgName="AllPatientsAttendanceRowChangeEvent" msprop:Generator_RowClassName="AllPatientsAttendanceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PatientId" msprop:Generator_ColumnVarNameInTable="columnPatientId" msprop:Generator_ColumnPropNameInRow="PatientId" msprop:Generator_ColumnPropNameInTable="PatientIdColumn" msprop:Generator_UserColumnName="PatientId" type="xs:string" minOccurs="0" />
+              <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname" type="xs:string" minOccurs="0" />
+              <xs:element name="InsuranceNumber" msprop:Generator_ColumnVarNameInTable="columnInsuranceNumber" msprop:Generator_ColumnPropNameInRow="InsuranceNumber" msprop:Generator_ColumnPropNameInTable="InsuranceNumberColumn" msprop:Generator_UserColumnName="InsuranceNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentDate" msprop:Generator_ColumnVarNameInTable="columnCurrentDate" msprop:Generator_ColumnPropNameInRow="CurrentDate" msprop:Generator_ColumnPropNameInTable="CurrentDateColumn" msprop:Generator_UserColumnName="CurrentDate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
